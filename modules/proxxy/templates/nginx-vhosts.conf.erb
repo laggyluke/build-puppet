@@ -51,7 +51,7 @@ server {
     proxy_cache_valid <%= params['ttl'] %>;
     <% if params.has_key?('username') && params.has_key?('password') %>
     proxy_hide_header WWW-Authenticate;
-    proxy_set_header Authorization "Basic <%= Base64.strict_encode64(params['username'] + ':' + params['password']) %>";
+    proxy_set_header Authorization "Basic <%= Base64.encode64(params['username'] + ':' + params['password']).chomp %>";
     <% end %>
   }
 }
