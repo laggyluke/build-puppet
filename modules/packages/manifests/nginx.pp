@@ -5,8 +5,9 @@
 class packages::nginx {
     case $::operatingsystem {
         Ubuntu: {
+            realize(Packages::Aptrepo['nginx-development'])
             package {
-                [ "nginx-full" ]:
+                [ "nginx" ]:
                     ensure => latest;
             }
         }
