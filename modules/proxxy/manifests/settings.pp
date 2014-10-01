@@ -12,18 +12,33 @@ class proxxy::settings {
             path => 'https://ftp.mozilla.org/',
             size => '16g',
             ttl => '1d',
-            username => 'foo',
-            password => 'bar'
-        },
-        'pypi.pub.build.mozilla.org' => {
-            path => 'http://pypi.pub.build.mozilla.org/',
-            size => '16g',
-            ttl => '1d'
         },
         's3' => {
             path => 'https://s3.amazonaws.com/',
             size => '16g',
-            ttl => '1d'
-        }
+            ttl => '1d',
+        },
+        'pypi.pub.build.mozilla.org' => {
+            path => 'http://pypi.pub.build.mozilla.org/',
+            size => '16g',
+            ttl => '1d',
+        },
+        'pypi.pvt.build.mozilla.org' => {
+            path => 'http://pypi.pvt.build.mozilla.org/',
+            size => '16g',
+            ttl => '1d',
+        },
+        'runtime-binaries.pvt.build.mozilla.org' => {
+            path => 'http://runtime-binaries.pvt.build.mozilla.org/',
+            size => '16g',
+            ttl => '1d',
+        },
+        'pvtbuilds.mozilla.org' => {
+            path => 'https://pvtbuilds.mozilla.org/',
+            size => '16g',
+            ttl => '1d',
+            username => 'proxy_reader',
+            password => secret('proxxy_pvtbuilds_password'),
+        },
     }
 }
