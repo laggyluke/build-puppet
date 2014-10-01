@@ -7,17 +7,12 @@ class proxxy {
     include nginx
 
     file {
-        $proxxy::settings::log_dir:
-            ensure => directory,
-            owner => 'root',
-            group => 'root',
-            mode => 700;
-
         $proxxy::settings::cache_dir:
             ensure => directory,
             owner => 'www-data',
             group => 'root',
-            mode => 700;
+            mode => 700,
+            before => Service['nginx'];
 
         $proxxy::settings::nginx_conf:
             content => template('proxxy/nginx.conf.erb'),

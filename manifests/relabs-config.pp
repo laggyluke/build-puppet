@@ -77,6 +77,7 @@ class config inherits config::base {
         "hskupin",
         "pchiasson",
         "jvehent",
+        "gmiroshnykov",
     ]
 }
 
