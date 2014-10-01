@@ -16,7 +16,6 @@ node "hp2.relabs.releng.scl3.mozilla.com" {
 }
 
 node "hp3.relabs.releng.scl3.mozilla.com" {
-    include toplevel::server::proxxy
 }
 
 node "hp4.relabs.releng.scl3.mozilla.com" {
