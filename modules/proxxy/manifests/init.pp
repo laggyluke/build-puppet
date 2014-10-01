@@ -27,6 +27,7 @@ class proxxy {
             owner => 'root',
             group => 'root',
             mode => 600,
+            show_diff => false, # may contain HTTP basic auth credentials
             notify => Service['nginx'],
             require => Class['packages::nginx'];
     }
