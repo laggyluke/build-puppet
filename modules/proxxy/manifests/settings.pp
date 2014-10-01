@@ -5,6 +5,8 @@ class proxxy::settings {
     $cache_dir = "/var/cache/proxxy"
     $nginx_conf = "/etc/nginx/nginx.conf"
     $nginx_vhosts_conf = "/etc/nginx/sites-enabled/proxxy"
+
+    # see http://nginx.org/en/docs/syslog.html
     $syslog_server = "unix:/dev/log"
 
     $backends = {
